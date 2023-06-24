@@ -1,4 +1,4 @@
-import Wallet from "../../components/petraWallet/wallet";
+import Wallet from "../../components/wallet";
 import Image from "next/image";
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
