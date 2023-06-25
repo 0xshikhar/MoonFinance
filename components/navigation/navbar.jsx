@@ -8,14 +8,15 @@ import { CgProfile } from "react-icons/cg";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
+// import Wallet from "../../components/wallet";
 
 const style = {
 	wrapper: `bg-black w-screen px-[1.2rem] py-[0.8rem] flex `,
 	logoContainer: `flex items-center cursor-pointer`,
 	logoText: ` ml-[0.8rem] text-white font-semibold text-2xl`,
-	searchBar: `flex flex-1 mx-[0.8rem] w-max-[520px] items-center bg-[#363840] rounded-[0.8rem] hover:bg-[#4c505c]`,
+	searchBar: `flex flex-1 mx-[0.8rem] w-max-[520px] h-[50px] items-center bg-[#363840] rounded-[0.8rem] hover:bg-[#4c505c]`,
 	searchIcon: `text-[#8a939b] mx-3 font-bold text-lg`,
-	searchInput: `h-[2.6rem] w-full border-0 bg-transparent outline-0 ring-0 px-2 pl-0 text-[#e6e8eb] placeholder:text-[#8a939b]`,
+	searchInput: `h-[1.6rem] w-full border-0 bg-transparent outline-0 ring-0 px-2 pl-0 text-[#e6e8eb] placeholder:text-[#8a939b]`,
 	headerItems: ` flex items-center align-right justify-end`,
 	headerItem: `text-white px-4 font-bold text-[#c8cacd] hover:text-white cursor-pointer`,
 	headerIcon: `text-[#8a939b] text-3xl font-black px-4 hover:text-white cursor-pointer`,
@@ -42,7 +43,7 @@ export default function Navbar() {
 						target={"_blank"}
 						className="text-[32px] text-white font-serif"
 					>
-						APTOS3
+						MoonFinance
 					</div>
 					<div className={style.logoText}></div>
 				</div>
@@ -98,6 +99,9 @@ export default function Navbar() {
 				</div>
 				<div className={style.headerIcon}>
 					<MdOutlineAccountBalanceWallet />
+				</div>
+				<div>
+					{/* <Wallet /> */}
 				</div>
 				<div>
 					<Suspense fallback={<div>Loading...</div>}>
