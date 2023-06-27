@@ -1,3 +1,4 @@
+import styles from "../styles/Home.module.css";
 import { useCallback, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { ChainId } from "@biconomy/core-types";
@@ -5,12 +6,12 @@ import SocialLogin from "@biconomy/web3-auth";
 import SmartAccount from "@biconomy/smart-account";
 
 const Wallet = () => {
-  const [provider, setProvider] = useState();
-  const [account, setAccount] = useState();
-  const [smartAccount, setSmartAccount] = useState(null);
+  const [provider, setProvider] = useState<any>();
+  const [account, setAccount] = useState<string>();
+  const [smartAccount, setSmartAccount] = useState<SmartAccount | null>(null);
   const [scwAddress, setScwAddress] = useState("");
   const [scwLoading, setScwLoading] = useState(false);
-  const [socialLoginSDK, setSocialLoginSDK] = useState(
+  const [socialLoginSDK, setSocialLoginSDK] = useState<SocialLogin | null>(
     null
   );
 
@@ -96,7 +97,7 @@ const Wallet = () => {
 
   return (
     <div>
-      <button className="px-4 py-3 bg-[#b1ff51] text- rounded-xl"
+      <button className="px-4 py-3 bg-[#98ee2c] text-black rounded-xl"
         onClick={!account ? connectWeb3 : disconnectWeb3}>
         {!account ? "Connect Wallet" : "Disconnect Wallet"}
       </button>

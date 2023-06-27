@@ -38,11 +38,7 @@ export default function Navbar() {
 			<Link href="/">
 				<div className={style.logoContainer}>
 					{/* <Image src={mantleSeaLogo} height={80} width={200} alt="mantle logo" /> */}
-					<div
-						href="/"
-						target={"_blank"}
-						className="text-[32px] text-white font-serif"
-					>
+					<div className="text-[32px] text-white font-serif">
 						MoonFinance
 					</div>
 					<div className={style.logoText}></div>
