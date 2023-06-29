@@ -75,25 +75,25 @@ const Wallet = () => {
     setScwAddress("");
   };
 
-  useEffect(() => {
-    async function setupSmartAccount() {
-      setScwAddress("");
-      setScwLoading(true);
-      const smartAccount = new SmartAccount(provider, {
-        activeNetworkId: ChainId.GOERLI,
-        supportedNetworksIds: [ChainId.GOERLI],
-      });
-      await smartAccount.init();
-      const context = smartAccount.getSmartAccountContext();
-      setScwAddress(context.baseWallet.getAddress());
-      setSmartAccount(smartAccount);
-      setScwLoading(false);
-    }
-    if (!!provider && !!account) {
-      setupSmartAccount();
-      console.log("Provider...", provider);
-    }
-  }, [account, provider]);
+  // useEffect(() => {
+  //   async function setupSmartAccount() {
+  //     setScwAddress("");
+  //     setScwLoading(true);
+  //     const smartAccount = new SmartAccount(provider, {
+  //       activeNetworkId: ChainId.,
+  //       supportedNetworksIds: [ChainId.GOERLI],
+  //     });
+  //     await smartAccount.init();
+  //     const context = smartAccount.getSmartAccountContext();
+  //     setScwAddress(context.baseWallet.getAddress());
+  //     setSmartAccount(smartAccount);
+  //     setScwLoading(false);
+  //   }
+  //   if (!!provider && !!account) {
+  //     setupSmartAccount();
+  //     console.log("Provider...", provider);
+  //   }
+  // }, [account, provider]);
 
   return (
     <div>

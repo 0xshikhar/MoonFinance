@@ -17,7 +17,7 @@ const style = {
 	searchBar: `flex flex-1 mx-[0.8rem] w-max-[520px] h-[50px] items-center bg-[#363840] rounded-[0.8rem] hover:bg-[#4c505c]`,
 	searchIcon: `text-[#8a939b] mx-3 font-bold text-lg`,
 	searchInput: `h-[1.6rem] w-full border-0 bg-transparent outline-0 ring-0 px-2 pl-0 text-[#e6e8eb] placeholder:text-[#8a939b]`,
-	headerItems: ` flex items-center align-right justify-end`,
+	headerItems: ` flex flex-1 justify-center items-center align-right justify-end`,
 	headerItem: `text-white px-4 font-bold text-[#c8cacd] hover:text-white cursor-pointer`,
 	headerIcon: `text-[#8a939b] text-3xl font-black px-4 hover:text-white cursor-pointer`,
 };
@@ -46,7 +46,7 @@ export default function Navbar() {
 			</Link>
 
 			{/* search bar to search streams */}
-			<div className={style.searchBar}>
+			{/* <div className={style.searchBar}>
 				<div className={style.searchIcon}>
 					<AiOutlineSearch />
 				</div>
@@ -68,7 +68,7 @@ export default function Navbar() {
 				>
 					Search
 				</button>
-			</div>
+			</div> */}
 
 			<div className={style.headerItems}>
 				<Link href="/searching">
@@ -85,24 +85,26 @@ export default function Navbar() {
 				</div>
 
 				{/* <div className={style.headerIcon} onClick={() => { router.push(`/profile/${address}`) }}> */}
-				<div
-					className={style.headerIcon}
-					onClick={() => {
-						router.push("/nft");
-					}}
-				>
-					<CgProfile />
-				</div>
-				<div className={style.headerIcon}>
-					<MdOutlineAccountBalanceWallet />
-				</div>
-				<div>
-					{/* <Wallet /> */}
-				</div>
-				<div>
-					<Suspense fallback={<div>Loading...</div>}>
-						<SocialLoginDynamic />
-					</Suspense>
+				<div className="flex flex-1 justify-end ">
+					<div
+						className={style.headerIcon}
+						onClick={() => {
+							router.push("/nft");
+						}}
+					>
+						<CgProfile />
+					</div>
+					<div className={style.headerIcon}>
+						<MdOutlineAccountBalanceWallet />
+					</div>
+					<div>
+						{/* <Wallet /> */}
+					</div>
+					<div>
+						<Suspense fallback={<div>Loading...</div>}>
+							<SocialLoginDynamic />
+						</Suspense>
+					</div>
 				</div>
 			</div>
 		</div>
