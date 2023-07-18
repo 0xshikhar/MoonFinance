@@ -4,7 +4,7 @@ import { BsArrowRight } from 'react-icons/bs';
 
 const style = {
   wrapper: `relative`,
-  container: `before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://shikhar.xyz/wp-content/uploads/2023/06/hero.png')] before:bg-center before:opacity-100 `,
+  container: `before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://t4.ftcdn.net/jpg/03/16/49/45/360_F_316494556_zSy5wKaJgXnpQsSvf63uTz9wJN4xjQ0Y.jpg')] before:bg-center before:opacity-100 `,
   contentWrapper: `h-screen relative justify-center flex-wrap items-center`,
   copyContainer: `p-10 pl-[100px] pt-[100px] w-3/5`,
   title: `relative text-white text-[70px] font-serif mb-[2.5rem] `,
@@ -23,7 +23,6 @@ const Hero = () => {
   return (
     <div className={style.wrapper}>
       <div className={style.container}>
-
         <div className={style.contentWrapper}>
           <div className={style.copyContainer}>
             <div className='flex'>

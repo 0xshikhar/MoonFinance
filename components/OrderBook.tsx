@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { assetToImage } from '../utils/misc';
-import Exchange from '../../contracts/out/Exchange.sol/Exchange.json';
+import Exchange from '../smart-contract/artifacts/contracts/Exchange.sol/Exchange.json';
 import { predictionMarketAddresses, exchangeAddresses } from '../utils/addresses';
 import { Dispatch, SetStateAction, useState } from 'react';
 import { formatDate, formatPrice } from '../utils/helpers';

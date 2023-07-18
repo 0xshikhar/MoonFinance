@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query';
 import { priceFeedToSymbol } from '../utils/misc';
-import PredictionMarket from '../../contracts/out/PredictionMarket.sol/PredictionMarket.json';
-import Exchange from '../../contracts/out/Exchange.sol/Exchange.json';
+import PredictionMarket from '../smart-contract/artifacts/contracts/PredictionMarket.sol/PredictionMarket.json';
+import Exchange from '../smart-contract/artifacts/contracts/Exchange.sol/Exchange.json';
 import { Position } from '../types';
 import { formatDate } from '../utils/helpers';
 import { ethers } from 'ethers';

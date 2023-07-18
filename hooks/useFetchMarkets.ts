@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query';
 import { symbolToPriceFeed } from '../utils/misc';
-import PredictionMarket from '../../contracts/out/PredictionMarket.sol/PredictionMarket.json';
-import Exchange from '../../contracts/out/Exchange.sol/Exchange.json';
+import PredictionMarket from '../smart-contract/artifacts/contracts/PredictionMarket.sol/PredictionMarket.json';
+import Exchange from '../smart-contract/artifacts/contracts/Exchange.sol/Exchange.json';
 import { ethers } from 'ethers';
 import { useAccount, useNetwork } from 'wagmi';
 import { exchangeAddresses, predictionMarketAddresses } from '../utils/addresses';

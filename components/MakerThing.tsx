@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import Select from 'react-select';
 import { assetToImage, symbolToPriceFeed } from '../utils/misc';
-import PredictionMarket from '../../contracts/out/PredictionMarket.sol/PredictionMarket.json';
+import PredictionMarket from '../smart-contract/artifacts/contracts/PredictionMarket.sol/PredictionMarket.json';
 import { blackTheme } from '../design/themes';
 import { ethers } from 'ethers';
 import { Spinner } from './Spinner';
